@@ -10,14 +10,14 @@
     "axios": "^1.7.7",
     "lodash": "^4.17.21",
     "normalize.css": "^8.0.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "save-dev": "^0.0.1-security"
   },
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-react": "^7.25.9",
     "autoprefixer": "^10.4.20",
     "babel-loader": "^9.2.1",
     "css-loader": "^6.11.0",
