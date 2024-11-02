@@ -13,19 +13,23 @@ constructor() {
     this.form.addEventListener("submit", e => {
     e.preventDefault()
     this.sendRequest()
-    })
+  })
   }
 
   sendRequest() {
-    Axios.post('https://deluxe-griffin-3df091.netlify.app/.netlify/functions/secret-area',{password: this.field.value}).then(response => {
-      this.form.remove()
-      this.contentArea.innerHTML = response.data
-    }).catch( () => {
-      this.contentArea.injectHTML = `<p class="client-area__error">That secret phrease is not correct. Try again!</p>`
-      this.field.value = ''
-      this.field.focus()
-    })
+    Axios.post("https://deluxe-griffin-3df091.netlify.app/.netlify/functions/secret-area", { password: this.field.value })
+      .then(response => {
+        this.form.remove()
+        this.contentArea.innerHTML = response.data
+      })
+      .catch(() => {
+        this.contentArea.innerHTML = `<p class="client-area__error">That secret phrase is not correct. Try again.</p>`
+        this.field.value = ""
+        this.field.focus()
+      })
   }
+
+
 
 
 injectHTML() {
